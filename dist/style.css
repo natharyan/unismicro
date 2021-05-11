@@ -1,0 +1,322 @@
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans:wght@300;400;500;600&display=swap");
+* {
+  font-family: "Encode Sans", sans-serif;
+  color: #333;
+  margin: 0;
+}
+
+
+
+.team {
+  margin: auto;
+  background: #f6bf0c66;
+  max-width: 43rem;
+  padding: 1.1rem;
+  padding-bottom: 0.7rem;
+  border-radius: 25px;
+}
+.team img {
+  border-radius: 50%;
+  width: 6rem;
+  float: left;
+  margin-right: 10px;
+}
+.team .description {
+  float: none;
+}
+.team .name {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+.team .title {
+  font-weight: 500;
+  color: #8b6a00;
+  font-size: 1.3rem;
+}
+.team p {
+  font-weight: 400;
+}
+.team span {
+  display: block;
+}
+
+#counter {
+  padding: 7vw;
+  background: #f6bf0c66;
+  border-radius: 25px;
+  margin-top: 20rem;
+  display: block;
+  text-align: center;
+}
+#counter h2 {
+  color: #8b6a00;
+}
+#counter span {
+  font-size: 5rem;
+}
+
+body {
+  background-color: #f3f3f3;
+  font-weight: 500;
+  text-align: justify;
+  line-height: 1.5;
+}
+html, body { height: 100%; }
+body {
+  background:#ebaf4c;
+  overflow: hidden;
+}
+
+.ocean { 
+  height: 40vh;
+  width:100%;
+  position:fixed;
+  bottom:0;
+  left:0;
+  background: #015871;
+}
+
+.wave {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x; 
+  position: absolute;
+  top: -198px;
+  width: 6400px;
+  height: 198px;
+  animation: wave 9s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+  transform: translate3d(0, 0, 0);
+}
+
+.wave:nth-of-type(2) {
+  top: -175px;
+  animation: wave 9s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
+  opacity: 1;
+}
+
+@keyframes wave {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -1600px;
+  }
+}
+
+@keyframes swell {
+  0%, 100% {
+    transform: translate3d(0,-25px,0);
+  }
+  50% {
+    transform: translate3d(0,5px,0);
+  }
+}
+.drop{
+  position: absolute;
+	width: 20px;
+	height: 20px;
+  top: -30px;
+  margin: 0 auto;
+	background: #ec970e;;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+  -moz-animation-name: drip;
+  -webkit-animation-name: drip;
+  animation-name: drip;
+  -moz-animation-timing-function: cubic-bezier(1,0,.91,.19);
+  -webkit-animation-timing-function: cubic-bezier(1,0,.91,.19);
+  animation-timing-function: cubic-bezier(1,0,.91,.19);
+  -moz-animation-duration: 5s;
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+  -moz-animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  transform: scale(1.5);
+}
+
+.drop:before {
+  content: "";
+  position: absolute;
+  width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 30px solid #ec970e;;
+  top: -22px;
+}
+
+@keyframes drip {
+    to {
+      top: 100vh;
+    }
+}
+a .liquid {
+  position: absolute;
+  top: -80px;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  background: rgb(62, 228, 228);
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, .5);
+  transition: .5s;
+}
+
+a .liquid::after,
+a .liquid::before {
+  content: '';
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -75%);
+  background: #015871;
+}
+
+a .liquid::before {
+  
+  border-radius: 45%;
+  background: #015871;
+  animation: animate 5s linear infinite;
+}
+
+a .liquid::after {
+  
+  border-radius: 40%;
+  background: rgba(20, 20, 20, .5);
+  animation: animate 10s linear infinite;
+}
+a.liquida {
+  position: relative;
+  padding: 20px 50px;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 200px;
+  overflow: hidden;
+  border-radius: 40px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+a:hover .liquid{
+  top: -120px;
+}
+a span {
+  position: relative;
+  color: #fff;
+  font-family: Arial;
+  letter-spacing: 8px;
+  z-index: 1;
+}
+@keyframes animate {
+  0% {
+    transform: translate(-50%, -75%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -75%) rotate(360deg);
+  }
+}
+*::selection {
+  background: #f6bf0caa;
+  color: #f3f3f3;
+}
+
+.row {
+  margin-top: 2rem;
+}
+
+.red {
+  color: #f6bf0c;
+}
+
+
+/*gallery*/
+.slideshow-container {
+  position: relative;
+  margin: auto;
+  margin-top: 5rem;
+  max-width: 50rem;
+}
+.slideshow-container a {
+  text-decoration: none;
+}
+.slideshow-container a:hover {
+  color: white;
+}
+.slideshow-container img {
+  border-radius: 25px;
+  max-height: 35rem;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  background: #33333399;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #97760a66;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #f6bf0c;
+}
