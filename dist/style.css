@@ -65,7 +65,7 @@ body {
 	height: 20px;
   top: -30px;
   margin: 0 auto;
-	background: #ec970e;;
+	background: #EDC143;
 	-moz-border-radius: 20px;
 	-webkit-border-radius: 20px;
 	border-radius: 20px;
@@ -91,7 +91,7 @@ body {
 	height: 0;
 	border-left: 10px solid transparent;
 	border-right: 10px solid transparent;
-	border-bottom: 30px solid #ec970e;;
+	border-bottom: 30px solid #EDC143;
   top: -22px;
 }
 
