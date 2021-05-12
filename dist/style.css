@@ -16,7 +16,12 @@ body {
   background:#ebaf4c;
   overflow: hidden;
 }
-
+.block{
+  transition: transform 1.5s;
+}
+.block:hover{
+  transform: scale(1.05);
+}
 .ocean { 
   height: 40vh;
   width:100%;
